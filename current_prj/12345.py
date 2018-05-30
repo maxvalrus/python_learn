@@ -1,12 +1,11 @@
-def checkPalindrome(inputString):
-    i = 0
-    max = len(inputString) // 2
-    while i <= max:
-        print(inputString[i], inputString[-i - 1])
-        if inputString[i] == inputString[-i - 1]:
-            i += 1
-        else:
-            return False
-    return True
+def deco(func):
+    def test_deco(text):
+        print('Decoration: ')
+        func(text)
+    return test_deco
 
-checkPalindrome('aabaa')
+@deco
+def pr_str(text):
+    print('My text is ', text)
+
+pr_str('la la la')
