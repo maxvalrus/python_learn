@@ -9,3 +9,4 @@ def pr_str(text):
     print('My text is ', text)
 
 pr_str('la la la')
+
