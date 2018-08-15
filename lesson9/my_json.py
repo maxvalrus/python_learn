@@ -14,9 +14,9 @@ def write_file(file, text, mode='w'):
         f.write(text)
 
 if __name__ == "__main__":
-    data = read_file("..\lesson9\data.json")
-    print(data)
+    data = read_file("data.json")
+    #print(data)
     obj = json.loads(data)
-    print(obj["object"]["key"][0])
+    #print("---------------" + obj["object"]["key"][0])
     obj["new"] = "secret"
     print(json.dumps(obj, sort_keys=True, indent=4))
